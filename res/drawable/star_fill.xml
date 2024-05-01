@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="15.0"
+    android:viewportHeight="15.0">
+
+    <!-- Filled star shape centered in the viewport -->
+    <path
+        android:pathData="M7.77,1.96 l1.45,4.43 h4.55 l-3.68,2.68 l1.45,4.43 l-3.68,-2.68 l-3.68,2.68 l1.45,-4.43 l-3.68,-2.68 h4.55 Z"
+        android:fillColor="#FFD700"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="1"
+        android:strokeAlpha="0.5"/>
+
+</vector>
