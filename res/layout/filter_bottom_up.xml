@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Review Item 1 -->
+
+    <ScrollView
+        android:id="@+id/verticalScrollViewRestaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Price Filter -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Slider for Price -->
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/priceSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/selectedPriceText"
+                android:stepSize="1"
+                android:value="150"
+                android:valueFrom="0"
+                android:valueTo="300" />
+
+            <TextView
+                android:id="@+id/selectedPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Price: $0-300/pax"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="16dp" />
+
+
+
+
+            <!-- Star Ratings Filter -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overall Star Ratings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Star Rating Bar -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/filterStar1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/star_empty"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onStarClicked"
+                    android:tag="1" />
+
+                <ImageView
+                    android:id="@+id/filterStar2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/star_empty"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onStarClicked"
+                    android:tag="2" />
+
+                <ImageView
+                    android:id="@+id/filterStar3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/star_empty"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onStarClicked"
+                    android:tag="3" />
+
+                <ImageView
+                    android:id="@+id/filterStar4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/star_empty"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onStarClicked"
+                    android:tag="4" />
+
+                <ImageView
+                    android:id="@+id/filterStar5"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/star_empty"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onStarClicked"
+                    android:tag="5" />
+            </LinearLayout>
+
+            <!-- Cuisines Filter -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuisines"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Checkboxes for Cuisines -->
+            <CheckBox
+                android:id="@+id/AmericanCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Western"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+            <CheckBox
+                android:id="@+id/MexicanCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mexican"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/ItalianCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Italian"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/ThaiCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thai"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/AsianCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asian"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/IndianCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indian"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/JapaneseCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Japanese"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/AsianFusionCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asian Fusion"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/BreakfastCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breakfast"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/ChineseCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chinese"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <!-- Dietary Filter -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dietary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Checkboxes for Dietary -->
+            <CheckBox
+                android:id="@+id/GlutenFreeCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gluten Free"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+            <CheckBox
+                android:id="@+id/SeafoodCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seafood"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/HalalCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/VeganFriendlyCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegan Friendly"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+            <CheckBox
+                android:id="@+id/VegetarianCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegetarian"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+            <CheckBox
+                android:id="@+id/HealthyCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Healthy"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <!--            Location-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Checkboxes for Location -->
+            <CheckBox
+                android:id="@+id/CentralCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Central"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+            <CheckBox
+                android:id="@+id/NorthCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="North"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/NorthEastCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="North-East"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <CheckBox
+                android:id="@+id/WestCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="West"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+            <CheckBox
+                android:id="@+id/EastCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="East"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false"
+                android:layout_marginTop="1dp" />
+
+            <!-- Show Results Button -->
+            <Button
+                android:id="@+id/showResultsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show Results"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="#fbb862"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="100dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

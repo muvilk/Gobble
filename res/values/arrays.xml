@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="location_options">
+        <item>Central</item>
+        <item>North</item>
+        <item>North-East</item>
+        <item>West</item>
+        <item>East</item>
+    </string-array>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Japanese</item>
+    </string-array>
+    <string-array name="restaurant_options_list">
+        <item>restaurant1</item>
+        <item>restaurant2</item>
+        <item>restaurant3</item>
+        <item>restaurant4</item>
+        <item>restaurant5</item>
+    </string-array>
+
+    <string-array name="cuisine_adventurousness_options">
+        <item>Not Adventurous</item>
+        <item>Slightly Adventurous</item>
+        <item>Moderately Adventurous</item>
+        <item>Adventurous</item>
+        <item>Highly Adventurous</item>
+    </string-array>
+
+    <string-array name="spicy_tolerance_options">
+        <item>Not at all</item>
+        <item>Mildly</item>
+        <item>Moderately</item>
+        <item>Very well</item>
+        <item>Love it</item>
+    </string-array>
+
+    <string-array name="dessert_importance_options">
+        <item>Essential</item>
+        <item>Nice to have</item>
+        <item>Indifferent</item>
+        <item>Rarely indulge</item>
+    </string-array>
+
+    <string-array name="health_importance_options">
+        <item>Very important</item>
+        <item>Somewhat important</item>
+        <item>Neutral - I enjoy healthy options but dont specifically seek them out</item>
+        <item>Not important</item>
+    </string-array>
+
+    <string-array name="meal_time_preferences">
+        <item>Breakfast</item>
+        <item>Brunch</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Late Night</item>
+    </string-array>
+
+
+
+
+
+
+</resources>

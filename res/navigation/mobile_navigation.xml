@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.sutd.t4app.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_reviews"
+        android:name="com.sutd.t4app.ui.reviews.ReviewsFragment"
+        android:label="@string/title_reviews"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.sutd.t4app.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.sutd.t4app.ui.map.MapFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/fragment_map" />
+
+    <fragment
+        android:id="@+id/navigation_restaurant"
+        android:name="com.sutd.t4app.ui.restaurant.RestaurantFragment"
+        android:label="ResturantProfile"
+        tools:layout="@layout/fragment_restuarant_profile"/>
+
+    <fragment
+        android:id="@+id/navigation_filter"
+        android:name="com.sutd.t4app.ui.filter.FilterFragment"
+        android:label="Filter"
+        tools:layout="@layout/filter_bottom_up"/>
+    <fragment
+        android:id="@+id/compare_fragment"
+        android:name="com.sutd.t4app.ui.restaurant.CompareFragment"
+        android:label="Compare Restaurant"
+        tools:layout="@layout/fragment_compare"/>
+
+    <fragment
+        android:id="@+id/navigate_to_editprofile"
+        android:name="com.sutd.t4app.ui.profile.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/edit_profile"/>
+
+    <fragment
+        android:id="@+id/navigation_questions"
+        android:name="com.sutd.t4app.ui.ProfileQuestions.QuestionFragment"
+        android:label="Questions"
+        tools:layout="@layout/questions"/>
+
+    <fragment
+        android:id="@+id/nav_to_settings"
+        android:name="com.sutd.t4app.ui.profile.SettingFragment"
+        android:label="Settings"
+        tools:layout="@layout/profile_settings"/>
+
+    <action
+        android:id="@+id/torestaurantfragment"
+        app:destination="@id/navigation_restaurant"/>
+
+    <action
+        android:id="@+id/rest_back_to_home"
+        app:destination="@id/navigation_home"/>
+
+    <action
+        android:id="@+id/tofilterfragment"
+        app:destination="@id/navigation_filter"/>
+    <action
+        android:id="@+id/to_compare_fragment"
+        app:destination="@id/compare_fragment" />
+
+    <action
+        android:id="@+id/toQuestionspage"
+        app:destination="@id/navigation_questions"/>
+    <action
+        android:id="@+id/toeditProfile"
+        app:destination="@id/navigate_to_editprofile" />
+
+    <action
+        android:id="@+id/tosettings"
+        app:destination="@id/nav_to_settings"/>
+
+    <action
+        android:id="@+id/backtoprofile"
+        app:destination="@id/navigation_profile"/>
+
+
+</navigation>

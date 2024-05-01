@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/signUpTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/primary"
+                android:layout_gravity="center"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Question 1: Cuisine Preference -->
+            <TextView
+                android:id="@+id/question1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What type of cuisine do you prefer?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/cuisineRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/radioItalian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Italian" />
+
+                <CheckBox
+                    android:id="@+id/radioMexican"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mexican" />
+
+                <CheckBox
+                    android:id="@+id/radioAsian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asian" />
+
+                <CheckBox
+                    android:id="@+id/radioAsianFusion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asian Fusion" />
+
+                <CheckBox
+                    android:id="@+id/radioWestern"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Western" />
+
+                <CheckBox
+                    android:id="@+id/radioBreakFast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Breakfast" />
+
+                <CheckBox
+                    android:id="@+id/radioChinese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chinese" />
+
+                <CheckBox
+                    android:id="@+id/radioThai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thai" />
+
+                <CheckBox
+                    android:id="@+id/radioIndian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Indian" />
+
+                <CheckBox
+                    android:id="@+id/radioJapanese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Japanese" />
+            </RadioGroup>
+
+            <!-- Question 2: Dietary Preferences -->
+            <TextView
+                android:id="@+id/question2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you have any dietary preferences?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <CheckBox
+                android:id="@+id/checkboxVegetarian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegetarian" />
+
+            <CheckBox
+                android:id="@+id/checkboxVegan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegan" />
+
+            <CheckBox
+                android:id="@+id/checkboxGlutenFree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gluten-free" />
+
+            <CheckBox
+                android:id="@+id/checkboxHalal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halal" />
+
+            <CheckBox
+                android:id="@+id/checkboxSeafood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seafood" />
+
+            <CheckBox
+                android:id="@+id/checkboxHealthy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Healthy" />
+
+            <!-- Add more dietary preference checkboxes as needed -->
+
+            <!-- Question 3: Location Preference -->
+            <TextView
+                android:id="@+id/question3TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is your preferred location?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/locationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/location_options" />
+
+            <!-- Question 4: Budget Preference per Meal -->
+            <TextView
+                android:id="@+id/question4TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is your budget preference per meal?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <SeekBar
+                android:id="@+id/budgetSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="10"
+                android:progressTint="@color/primary"
+                android:thumbTint="@color/primary"/>
+
+            <TextView
+                android:id="@+id/budgetValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Budget: $500"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Question 5: Types of Food They Like -->
+            <TextView
+                android:id="@+id/question5TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What types of food do you like?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Spicy Checkbox -->
+            <CheckBox
+                android:id="@+id/spicyCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spicy"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+
+            <!-- Sweet Checkbox -->
+            <CheckBox
+                android:id="@+id/sweetCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sweet"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+
+            <!-- Sour Checkbox -->
+            <CheckBox
+                android:id="@+id/sourCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sour"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+
+            <!-- Salty Checkbox -->
+            <CheckBox
+                android:id="@+id/saltyCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salty"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+
+            <!-- Savory Checkbox -->
+            <CheckBox
+                android:id="@+id/savoryCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Savory"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+            <!-- Cuisine Exploration -->
+            <TextView
+                android:id="@+id/cuisineExplorationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuisine Exploration: Are you adventurous with cuisines, or do you prefer sticking to familiar tastes?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/cuisineExplorationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/cuisine_adventurousness_options"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Spicy Food Tolerance -->
+            <TextView
+                android:id="@+id/spicyToleranceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spicy Food Tolerance: How well do you tolerate spicy food?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/spicyToleranceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/spicy_tolerance_options"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Sweet Tooth -->
+            <TextView
+                android:id="@+id/sweetToothTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sweet Tooth: How important are desserts to you in a dining experience?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/sweetToothSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/dessert_importance_options"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Specialty Dishes -->
+            <TextView
+                android:id="@+id/specialtyDishesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specialty Dishes: Are there any specific dishes or food items you particularly enjoy or seek out?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/specialtyDishesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="List some of your favorite dishes"
+                android:inputType="text"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Health and Wellness -->
+            <TextView
+                android:id="@+id/healthWellnessTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health and Wellness: How important are health and wellness options to you in your dining choices?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/healthWellnessSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/health_importance_options"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Ambience Preference -->
+            <TextView
+                android:id="@+id/ambiencePreferenceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ambience Preference: What dining ambience do you prefer?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Add Checkboxes for Ambience Preferences -->
+            <CheckBox
+                android:id="@+id/checkboxCasual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Casual"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/checkboxCozy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cozy"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/checkboxRomantic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Romantic"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/checkboxFormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Formal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+
+            <CheckBox
+                android:id="@+id/checkboxEnergetic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Energetic"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:checked="false" />
+
+            <!-- Meal Preference -->
+            <TextView
+                android:id="@+id/mealPreferenceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meal Preference: Do you have a preferred meal time for dining out?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/mealTimePreferenceSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/meal_time_preferences"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Ingredient Preferences or Dislikes -->
+            <TextView
+                android:id="@+id/ingredientPreferencesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingredient Preferences: Are there specific ingredients you particularly enjoy in your meals?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/ingredientPreferencesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g., Avocado, Quinoa, Salmon"
+                android:inputType="text"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/ingredientDislikesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingredient Dislikes: Are there specific ingredients you dislike or avoid?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/ingredientDislikesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g., Nuts, Dairy, Gluten"
+                android:inputType="text"
+                android:layout_marginTop="8dp"/>
+
+
+            <Button
+                android:id="@+id/finalizeProfileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Finalize Profile"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:background="#FF5722"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

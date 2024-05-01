@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_sign_up_navigation"
+    app:startDestination="@+id/login_navigation">
+
+    <fragment
+        android:id="@+id/login_navigation"
+        android:name="com.sutd.t4app.ui.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login" />
+
+
+    <fragment
+        android:id="@+id/signup_navigation"
+        android:name="com.sutd.t4app.ui.signup.SignUpFragment"
+        android:label="@string/title_signup"
+        tools:layout="@layout/fragment_sign_up" />
+
+    <fragment
+        android:id="@+id/preferences_qn_navigation"
+        android:name="com.sutd.t4app.ui.ProfileQuestions.QuestionFragment"
+        android:label="@string/title_preferences"
+        tools:layout="@layout/questions" />
+
+    <action
+        android:id="@+id/tosignupfragment"
+        app:destination="@id/signup_navigation"/>
+
+    <action
+        android:id="@+id/toprefferencefragment"
+        app:destination="@id/preferences_qn_navigation"/>
+
+</navigation>
